@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация о компании</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .company-name {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .company-tagline {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .info-section {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(116, 75, 162, 0.05);
+            border-radius: 15px;
+            border-left: 4px solid #764ba2;
+        }
+        
+        .section-title {
+            font-size: 1.2rem;
+            color: #764ba2;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #555;
+            min-width: 120px;
+            margin-right: 10px;
+        }
+        
+        .info-value {
+            color: #333;
+            flex: 1;
+            word-break: break-word;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-btn {
+            flex: 1;
+            min-width: 120px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(118, 75, 162, 0.1);
+        }
+        
+        @media (max-width: 480px) {
+            .company-name {
+                font-size: 1.5rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .info-label {
+                min-width: 100px;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+            }
+            
+            .contact-btn {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="company-name">ТОО «CK MEGARON»</div>
+            <div class="company-tagline">Надежный партнер для вашего бизнеса</div>
+        </div>
+        
+        <div class="content">
+            <div class="info-section">
+                <div class="section-title">📋 Основная информация</div>
+                <div class="info-item">
+                    <span class="info-label">Полное название:</span>
+                    <span class="info-value">Товарищество с ограниченной ответственностью «CK MEGARON»</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">БИН:</span>
+                    <span class="info-value">030140007312</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Руководитель:</span>
+                    <span class="info-value">Джагупаров Азамат Бейсенович</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Свидетельство НДС:</span>
+                    <span class="info-value">серия 03001 №0006556 от 12.07.2013г.</span>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <div class="section-title">🏢 Адрес</div>
+                <div class="info-item">
+                    <span class="info-label">Юридический адрес:</span>
+                    <span class="info-value">110000, Республика Казахстан, Костанайская область, город Костанай, микрорайон Береке, дом 79, квартира 26</span>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <div class="section-title">🏦 Банковские реквизиты</div>
+                
+                <div style="margin-bottom: 20px; padding: 15px; background: rgba(255,255,255,0.8); border-radius: 10px;">
+                    <div style="font-weight: 600; color: #764ba2; margin-bottom: 8px;">📍 РГУ «Комитет казначейства Министерства финансов РК»</div>
+                    <div class="info-item">
+                        <span class="info-label">ИИК:</span>
+                        <span class="info-value">KZ10070G000652N00321</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">БИК:</span>
+                        <span class="info-value">KKMFKZ2A</span>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px; padding: 15px; background: rgba(255,255,255,0.8); border-radius: 10px;">
+                    <div style="font-weight: 600; color: #764ba2; margin-bottom: 8px;">🏪 АО «Alatau City Bank»</div>
+                    <div class="info-item">
+                        <span class="info-label">ИИК:</span>
+                        <span class="info-value">KZ60998JTB0000154364</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">БИК:</span>
+                        <span class="info-value">TSESKZKA</span>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px; padding: 15px; background: rgba(255,255,255,0.8); border-radius: 10px;">
+                    <div style="font-weight: 600; color: #764ba2; margin-bottom: 8px;">🏪 АО «ForteBank» (KZT)</div>
+                    <div class="info-item">
+                        <span class="info-label">ИИК:</span>
+                        <span class="info-value">KZ1096520F0008012034</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">БИК:</span>
+                        <span class="info-value">IRTYKZKA</span>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px; padding: 15px; background: rgba(255,255,255,0.8); border-radius: 10px;">
+                    <div style="font-weight: 600; color: #764ba2; margin-bottom: 8px;">🏪 АО «ForteBank» (RUB)</div>
+                    <div class="info-item">
+                        <span class="info-label">ИИК:</span>
+                        <span class="info-value">KZ8096520F0008012035</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">БИК:</span>
+                        <span class="info-value">IRTYKZKA</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Валюта:</span>
+                        <span class="info-value">RUB</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-buttons">
+                <a href="#" class="contact-btn btn-primary" onclick="copyToClipboard()">📋 Копировать реквизиты</a>
+                <a href="#" class="contact-btn btn-secondary" onclick="downloadVCard()">📱 Сохранить контакт</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Информация актуальна на дату сканирования QR-кода
+        </div>
+    </div>
+    
+    <script>
+        function copyToClipboard() {
+            const text = `ТОО «CK MEGARON»
+БИН: 030140007312
+Руководитель: Джагупаров Азамат Бейсенович
+
+Адрес: 110000, Республика Казахстан, Костанайская область, город Костанай, микрорайон Береке, дом 79, квартира 26
+
+Банковские реквизиты:
+
+РГУ «Комитет казначейства Министерства финансов РК»
+ИИК: KZ10070G000652N00321
+БИК: KKMFKZ2A
+
+АО «Alatau City Bank»
+ИИК: KZ60998JTB0000154364
+БИК: TSESKZKA
+
+АО «ForteBank» (KZT)
+ИИК: KZ1096520F0008012034
+БИК: IRTYKZKA
+
+АО «ForteBank» (RUB)
+ИИК: KZ8096520F0008012035
+БИК: IRTYKZKA
+Валюта: RUB`;
+
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Реквизиты скопированы в буфер обмена!');
+            }).catch(() => {
+                alert('Не удалось скопировать. Попробуйте выделить текст вручную.');
+            });
+        }
+        
+        function downloadVCard() {
+            const vCard = `BEGIN:VCARD
+VERSION:3.0
+FN:ТОО CK MEGARON
+ORG:ТОО CK MEGARON
+ADR:;;микрорайон Береке, дом 79, квартира 26;Костанай;Костанайская область;110000;Республика Казахстан
+NOTE:БИН: 030140007312\\nРуководитель: Джагупаров Азамат Бейсенович
+END:VCARD`;
+
+            const blob = new Blob([vCard], { type: 'text/vcard' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'CK_MEGARON.vcf';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
