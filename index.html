@@ -13,7 +13,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0a1628 0%, #1a2e4a 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -21,30 +21,37 @@
         .container {
             max-width: 600px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.97);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             overflow: hidden;
         }
         
         .header {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: linear-gradient(135deg, #0d1f3c 0%, #1a3560 100%);
             color: white;
             padding: 30px;
             text-align: center;
+            border-bottom: 3px solid #f0a500;
+        }
+
+        .header-logo {
+            margin-bottom: 14px;
         }
         
         .company-name {
             font-size: 2rem;
             font-weight: bold;
             margin-bottom: 10px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            color: #ffffff;
         }
         
         .company-tagline {
             font-size: 1rem;
-            opacity: 0.9;
+            opacity: 0.85;
+            color: #c8d8f0;
         }
         
         .content {
@@ -54,14 +61,14 @@
         .info-section {
             margin-bottom: 25px;
             padding: 20px;
-            background: rgba(116, 75, 162, 0.05);
+            background: rgba(13, 31, 60, 0.05);
             border-radius: 15px;
-            border-left: 4px solid #764ba2;
+            border-left: 4px solid #1a3560;
         }
         
         .section-title {
             font-size: 1.2rem;
-            color: #764ba2;
+            color: #0d1f3c;
             margin-bottom: 10px;
             font-weight: 600;
         }
@@ -108,13 +115,13 @@
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0d1f3c 0%, #1a3560 100%);
             color: white;
         }
         
         .btn-secondary {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            color: white;
+            background: linear-gradient(135deg, #f0a500 0%, #f5c000 100%);
+            color: #0d1f3c;
         }
         
         .contact-btn:hover {
@@ -127,7 +134,20 @@
             padding: 20px;
             color: #666;
             font-size: 0.8rem;
-            border-top: 1px solid rgba(118, 75, 162, 0.1);
+            border-top: 1px solid rgba(13, 31, 60, 0.1);
+        }
+
+        .bank-card {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255,255,255,0.8);
+            border-radius: 10px;
+        }
+
+        .bank-title {
+            font-weight: 600;
+            color: #0d1f3c;
+            margin-bottom: 8px;
         }
         
         @media (max-width: 480px) {
@@ -156,6 +176,26 @@
 <body>
     <div class="container">
         <div class="header">
+            <div class="header-logo">
+                <!-- Construction / engineering SVG logo -->
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Hard hat brim -->
+                    <ellipse cx="36" cy="46" rx="28" ry="6" fill="#f0a500"/>
+                    <!-- Hard hat dome -->
+                    <path d="M14 46 Q14 22 36 20 Q58 22 58 46 Z" fill="#f5c000"/>
+                    <!-- Hat band stripe -->
+                    <rect x="14" y="42" width="44" height="5" rx="2" fill="#e09000"/>
+                    <!-- Crane arm -->
+                    <rect x="33" y="6" width="4" height="16" rx="2" fill="#ffffff" opacity="0.9"/>
+                    <rect x="20" y="6" width="32" height="4" rx="2" fill="#ffffff" opacity="0.9"/>
+                    <!-- Crane hook -->
+                    <rect x="48" y="10" width="3" height="10" rx="1.5" fill="#ffffff" opacity="0.9"/>
+                    <path d="M48 20 Q48 25 51.5 25 Q55 25 55 22" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.9"/>
+                    <!-- Gear/cog on hat -->
+                    <circle cx="36" cy="33" r="5" fill="#0d1f3c" opacity="0.6"/>
+                    <circle cx="36" cy="33" r="3" fill="#f0a500"/>
+                </svg>
+            </div>
             <div class="company-name">ТОО «CK MEGARON»</div>
             <div class="company-tagline">Строительство инженерных коммуникации</div>
         </div>
@@ -192,8 +232,8 @@
             <div class="info-section">
                 <div class="section-title">🏦 Банковские реквизиты</div>
                 
-                <div style="margin-bottom: 20px; padding: 15px; background: rgba(255,255,255,0.8); border-radius: 10px;">
-                    <div style="font-weight: 600; color: #764ba2; margin-bottom: 8px;">📍 РГУ «Комитет казначейства Министерства финансов РК»</div>
+                <div class="bank-card">
+                    <div class="bank-title">📍 РГУ «Комитет казначейства Министерства финансов РК»</div>
                     <div class="info-item">
                         <span class="info-label">ИИК:</span>
                         <span class="info-value">KZ10070G000652N00321</span>
@@ -204,8 +244,8 @@
                     </div>
                 </div>
                 
-                <div style="margin-bottom: 20px; padding: 15px; background: rgba(255,255,255,0.8); border-radius: 10px;">
-                    <div style="font-weight: 600; color: #764ba2; margin-bottom: 8px;">🏪 АО «Alatau City Bank»</div>
+                <div class="bank-card">
+                    <div class="bank-title">🏪 АО «Alatau City Bank»</div>
                     <div class="info-item">
                         <span class="info-label">ИИК:</span>
                         <span class="info-value">KZ60998JTB0000154364</span>
@@ -216,8 +256,8 @@
                     </div>
                 </div>
                 
-                <div style="margin-bottom: 20px; padding: 15px; background: rgba(255,255,255,0.8); border-radius: 10px;">
-                    <div style="font-weight: 600; color: #764ba2; margin-bottom: 8px;">🏪 АО «ForteBank» (KZT)</div>
+                <div class="bank-card">
+                    <div class="bank-title">🏪 АО «ForteBank» (KZT)</div>
                     <div class="info-item">
                         <span class="info-label">ИИК:</span>
                         <span class="info-value">KZ1096520F0008012034</span>
@@ -228,8 +268,8 @@
                     </div>
                 </div>
                 
-                <div style="margin-bottom: 20px; padding: 15px; background: rgba(255,255,255,0.8); border-radius: 10px;">
-                    <div style="font-weight: 600; color: #764ba2; margin-bottom: 8px;">🏪 АО «ForteBank» (RUB)</div>
+                <div class="bank-card">
+                    <div class="bank-title">🏪 АО «ForteBank» (RUB)</div>
                     <div class="info-item">
                         <span class="info-label">ИИК:</span>
                         <span class="info-value">KZ8096520F0008012035</span>
